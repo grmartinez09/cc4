@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class practice{
+    public static void main(String[] args) {
+        Scanner inputNum = new Scanner(System.in);
+            System.out.println("Give me a number: ");
+            int num = inputNum.nextInt();
+            inputNum.close();
+            pyramid(num);
+
+    }
+    public static void pyramid(int num) {
+        for (int i = 1; i <= num; i++){
+            for (int y = 1; y <= num; ++y)
+            System.out.print("#");
+        }
+        System.out.println();
+    }
+} 
