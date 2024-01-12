@@ -1,0 +1,17 @@
+My Saturday Schedule Algorithm
+
+7:30AM-8:50AM - Go to class in CC4: Data Structures and Algorithm in room M303
+8:50AM-9:10AM - Choose a place/cafe to eat and work at and go there
+	a. Starbucks
+	b. Mcdo
+	c. Jollibee
+	d. Zentea
+	e. SM
+9:10AM-9:20AM - Order food and drinks at counter, then find a table.
+9:20AM-9:30AM - Take out laptop from bag and turn on. Wait for ordered food to be served.
+9:30AM-11:10AM - Log in and start working on my projects, tasks, and emails to send while eating/drinking
+11:10AM - 11:15AM - Create and send EOD report and log out from work.
+11:15AM - 11:30AM - Go back to school
+11:30AM - 12:50PM - Go to class in TECHNO 100: Technopreneurship in room U402
+12:50PM- 2:10PM - Stay in roonm U402 for class in CC8: Introduction to Statistical Method
+2:10PM - Go home to continue work for as long as needed
