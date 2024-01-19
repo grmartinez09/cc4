@@ -5,7 +5,7 @@ public class satSchedule {
    System.out.println ("My Saturday Schedule");
    
    System.out.println ("7:30AM-8:50AM - Go to class in CC4: Data Structures and Algorithm in room M303"
-                        + "\n" + "8:50AM-9:10AM - Choose a place/cafe to eat and work at and go there"); /* "\n - new line" */
+                        + "\n8:50AM-9:10AM - Choose a place/cafe to eat and work at and go there"); /* "\n - new line" */
    
    Scanner resto = new Scanner(System.in); /* input */
    System.out.println ("a. Starbucks "
