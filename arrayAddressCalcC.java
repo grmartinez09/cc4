@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.HashMap;
 import java.util.Map;
 
-public class ArrayAddressFinder {
+public class arrayAddressCalcC {
     public static void main(String args[]) {
         Scanner acceptInput = new Scanner(System.in);
 

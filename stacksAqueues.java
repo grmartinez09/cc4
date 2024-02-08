@@ -11,7 +11,7 @@
             System.out.print("1. Stack\n2. Queue\nEnter your choice: ");
             int choice = scanner.nextInt();
             if (choice == 1) {
-                System.out.print("What is the upper bound: ");
+                System.out.print("What is the upper bound/TOP: ");
                 int upperBound_S = scanner.nextInt();
                 stack_prog(upperBound_S, scanner);
             } else if (choice == 2) {
@@ -32,10 +32,12 @@
                 actionChoice_S = scanner.nextInt();
                 if (actionChoice_S == 1) {
                     if (stack.size() < upperBound_S) {
-                        System.out.println("Enter the value to push into the stack: ");
-                        String item = scanner.nextLine();
+                        Scanner string_push = new Scanner(System.in);
+                        System.out.print("Enter the value to push into the stack: ");
+                        String item = string_push.nextLine();
                         stack.push(item);
                         System.out.println(stack);
+                        
                     } else {
                         System.out.println("Stack is full");
                     }
@@ -46,25 +48,30 @@
                     } else {
                         System.out.println("Stack is empty");
                     }
+                } else {        
+                    System.out.println("Invalid choice. Please choose either '1', '2' or, '3'.");
                 }
             }
         }
+        
 
         public static void queue_prog(int upperBound_Q, Scanner scanner) {
             Queue<String> queue = new LinkedList<>();
             int actionChoice_Q = 0;
             while (actionChoice_Q != 3) {
                 System.out.println("1. Enqueue\n2. Dequeue\n3. Quit");
-                System.out.println("Enter your choice: ");
+                System.out.print("Enter your choice: ");
                 actionChoice_Q = scanner.nextInt();
                 if (actionChoice_Q == 1) {
                     if (queue.size() < upperBound_Q) {
-                        System.out.println("Enter the value to enqueue in the queue: ");
-                        String item = scanner.nextLine();
+                        Scanner string_en = new Scanner(System.in);
+                        System.out.print("Enter the value to enqueue in the queue: ");
+                        String item = string_en.nextLine();
                         queue.add(item);
                         System.out.println(queue);
                     } else {
                         System.out.println("Queue is full");
+                        
                     }
                     } else if (actionChoice_Q == 2){
                         if (!queue.isEmpty()) {
@@ -73,6 +80,8 @@
                         } else {
                             System.out.println("Queue is empty");
                         }
+                    } else {
+                        System.out.println("Invalid choice. Please choose either '1', '2' or, '3'.");
                         }
                     }
                 }
