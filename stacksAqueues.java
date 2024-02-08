@@ -48,6 +48,8 @@
                     } else {
                         System.out.println("Stack is empty");
                     }
+                }else if (actionChoice_S == 3) {
+                    break;
                 } else {        
                     System.out.println("Invalid choice. Please choose either '1', '2' or, '3'.");
                 }
@@ -80,7 +82,9 @@
                         } else {
                             System.out.println("Queue is empty");
                         }
-                    } else {
+                    } else if (actionChoice_Q == 3) {
+                        break;
+                    }    else {
                         System.out.println("Invalid choice. Please choose either '1', '2' or, '3'.");
                         }
                     }
