@@ -13,12 +13,10 @@ public class avlTree {
     void updateHeight(Node n) {
         n.height = 1 + Math.max(height(n.left), height(n.right));
     }
-
     int height(Node n) {
         if (n == null) return 0;
         return n.height;
     }
-
     int getBalance(Node n) {
         if (n == null) return 0;
         return height(n.left) - height(n.right);
@@ -44,7 +42,7 @@ public class avlTree {
         return y;
     }
 
-    Node rebalance(Node z) {
+    Node rebalance (Node z) {
         updateHeight(z);
         int balance = getBalance(z);
         if (balance > 1) {
@@ -84,20 +82,37 @@ public class avlTree {
         } else if (key > node.key) {
             node.right = delete(node.right, key);
         } else {
-            // Implement the delete logic here
-            // ...
+            if (node.left == null || node.right == null) {
+                Node temp = null;
+                if (node.left == null) temp = node.right;
+                else temp = node.left;
+                if (temp == null) {
+                    temp = node;
+                    node = null;
+                } else {
+                    node = temp;
+                }
+            } else {
+                Node mostLeftChild = mostLeftChild(node.right);
+                node.key = mostLeftChild.key;
+                node.right = delete(node.right, node.key);
+            }
         }
+        if (node == null) return node;
         return rebalance(node);
     }
 
-    // Other methods (e.g., search, traversal) can be added here
-
-    public static void main(String[] args) {
-        // Example usage
-        avlTree tree = new avlTree();
-        tree.root = tree.insert(tree.root, 10);
-        tree.root = tree.insert(tree.root, 20);
-        tree.root = tree.insert(tree.root, 30);
-        // ...
+    Node find(int key) {
+        Node n = root;
+        while (n != null) {
+            if (key < n.key) {
+                n = n.left;
+            } else if (key > n.key) {
+                n = n.right;
+            } else {
+                return n;
+            }
+        }
+        return null;
     }
 }
